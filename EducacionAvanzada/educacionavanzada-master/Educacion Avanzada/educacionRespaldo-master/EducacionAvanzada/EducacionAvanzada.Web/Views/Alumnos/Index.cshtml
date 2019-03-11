@@ -1,0 +1,38 @@
+﻿@model List<EducacionAvanzada.BL.Alumno>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Alumnos</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Codigo
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Jornada
+            </th>
+            <th>
+                Grado
+            </th>
+            <th>
+                Seccion
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var alumno in Model)
+    {
+        <tr>
+            <td>@alumno.Id</td>
+            <td>@alumno.Nombre</td>
+            <td>@alumno.Jornada</td>
+            <td>@alumno.Grado</td>
+            <td>@alumno.Seccion</td>
+        </tr>
+    }
+</table>
